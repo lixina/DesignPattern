@@ -1,6 +1,6 @@
 package TemplateMethodPattern;
 
-public class TestPaperB extends QuestionSuper {
+public class TestPaperB extends PaperSuper {
 
 	@Override
 	public String anwser1() {

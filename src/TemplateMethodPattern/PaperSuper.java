@@ -1,6 +1,6 @@
 package TemplateMethodPattern;
 
-public abstract class QuestionSuper {
+public abstract class PaperSuper {
 	
 	public void Question1()
 	{
