@@ -1,6 +1,6 @@
 package ProxyPattern;
 
-public class Proxy implements GiveGift{
+public class Proxy implements IGiveGift{
 
 	Pursuer pursuer;
 	

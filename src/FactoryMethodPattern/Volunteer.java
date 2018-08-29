@@ -1,4 +1,4 @@
-package FactoryMethod;
+package FactoryMethodPattern;
 
 public class Volunteer extends LeiFeng{
 	

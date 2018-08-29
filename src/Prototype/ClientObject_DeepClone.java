@@ -1,13 +1,14 @@
 package Prototype;
 
-public class ClientObject_DeepClone {
+public class ClientObject_DeepClone{
 
 	public static void main(String[] args) throws CloneNotSupportedException {
 		
 		ResumeObject_DeepClone resume1 = new ResumeObject_DeepClone("呆子");
 		resume1.setPersonInfo("男", 24);
-		WorkExperense_DeepClone workExperense = new WorkExperense_DeepClone("2年","阿里巴巴");
+	    WorkExperense_DeepClone workExperense = new WorkExperense_DeepClone("2年","阿里巴巴");
 		resume1.setWorkExperience(workExperense);
+		
 		
 		ResumeObject_DeepClone resume2 = (ResumeObject_DeepClone) resume1.clone();
 		resume2.setPersonInfo("男", 23);
@@ -15,9 +16,9 @@ public class ClientObject_DeepClone {
 		ResumeObject_DeepClone resume3 = (ResumeObject_DeepClone) resume1.clone();
 		resume3.setPersonInfo("男", 22);
 		// 浅克隆
-		workExperense.setCompany("阿里巴巴");
-		workExperense.setWorkTime("10年");
-		//workExperense = new WorkExperense("2年","阿里巴巴");
+		//workExperense.setCompany("阿里巴巴");
+		//workExperense.setWorkTime("10年");
+		workExperense = new WorkExperense_DeepClone("3年","阿里巴巴");
 		resume3.setWorkExperience(workExperense);
 		
 		resume1.Display();

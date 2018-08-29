@@ -1,4 +1,4 @@
-package FactoryMethod;
+package FactoryMethodPattern;
 
 import SimpleFactoryPattern.OperationSuper;
 

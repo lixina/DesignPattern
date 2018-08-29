@@ -1,6 +1,6 @@
-package FactoryMethod;
+package FactoryMethodPattern;
 
-public class UndergraduateFactory implements LeiFengIFactory {
+public class UndergraduateFactory implements ILeiFengFactory {
 
 	@Override
 	public LeiFeng createLeiFeng() {

@@ -7,9 +7,15 @@ public class ResumeObject_DeepClone implements Cloneable {
 	private String sex;
 	private WorkExperense_DeepClone workExperense;
 	
+	
+	
 	public ResumeObject_DeepClone(String name) {
 		this.name = name;
 		workExperense = new WorkExperense_DeepClone();
+	}
+	
+	private ResumeObject_DeepClone(WorkExperense_DeepClone workExperense) throws CloneNotSupportedException {
+		this.workExperense = (WorkExperense_DeepClone) workExperense.clone();
 	}
 	
 	// 设置个人信息
@@ -17,13 +23,12 @@ public class ResumeObject_DeepClone implements Cloneable {
 		this.sex = sex;
 		this.age = age;
 	}
-	private ResumeObject_DeepClone(WorkExperense_DeepClone workExperense) throws CloneNotSupportedException {
-		this.workExperense = (WorkExperense_DeepClone) workExperense.clone();
-	}
 	
 	// 设置工作经历
-	public void setWorkExperience(WorkExperense_DeepClone workExperense) throws CloneNotSupportedException{
-		this.workExperense = (WorkExperense_DeepClone) this.workExperense.clone();
+	public void setWorkExperience(String company,String workTime) throws CloneNotSupportedException{
+		WorkExperense_DeepClone workExperense = new WorkExperense_DeepClone(workTime, workTime);
+		workExperense.setCompany(company);
+		workExperense.setWorkTime(workTime);
 	}
 	// 显示
 	public void Display() {
@@ -33,11 +38,18 @@ public class ResumeObject_DeepClone implements Cloneable {
 	
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
-		ResumeObject_DeepClone deepClone = new ResumeObject_DeepClone(this.workExperense);
-		deepClone.name = this.name;
+		//ResumeObject_DeepClone deepClone = new ResumeObject_DeepClone(this.workExperense);
+		ResumeObject_DeepClone deepClone = new ResumeObject_DeepClone(this.name);
+		//deepClone.name = this.name;
 		deepClone.age = this.age;
 		deepClone.sex = this.sex;
+		deepClone.setWorkExperience(workExperense.getCompany(), workExperense.getWorkTime());
 		return deepClone;
+	}
+
+	public void setWorkExperience(WorkExperense_DeepClone workExperense2) throws CloneNotSupportedException {
+		// TODO Auto-generated method stub
+		this.workExperense = (WorkExperense_DeepClone) this.workExperense.clone();
 	}
 	
 }

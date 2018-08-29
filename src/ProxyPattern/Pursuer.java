@@ -4,7 +4,7 @@ package ProxyPattern;
  * @author Bywinkey
  *
  */
-public class Pursuer implements GiveGift {
+public class Pursuer implements IGiveGift {
 
 	Girl girl;
 	

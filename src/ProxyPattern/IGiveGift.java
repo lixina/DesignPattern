@@ -4,7 +4,7 @@ package ProxyPattern;
  * @author Bywinkey
  *
  */
-public interface GiveGift {
+public interface IGiveGift {
 
 	void giveFlowers();
 	void giveChocolate();

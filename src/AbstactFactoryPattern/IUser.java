@@ -2,7 +2,7 @@ package AbstactFactoryPattern;
 
 public interface IUser {
 
-		public void insert(User user);
-		public void delete(int id);
+		void insert(User user);
+		void delete(int id);
 		
 }

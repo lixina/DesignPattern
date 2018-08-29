@@ -30,12 +30,4 @@ public class ConfigDataDourse {
 		return iDepartment;
 	}
 	
-	/*URL url = new URL("AbstactFactoryPattern/App.properties");  
-	InputStream inStream = url.openStream();
-	Properties properties = new Properties();  
-	properties.load(inStream); 
-	String value = properties.getProperty("DB");  */
-	
-	
-	
 }
