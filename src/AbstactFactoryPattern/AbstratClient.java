@@ -6,7 +6,6 @@ public class AbstratClient {
 		
 		User user = new User();
 		IFactory iFactory = new MySQLFactory();
-		
 		IUser iUser = iFactory.CreateUser();
 		IDepartment iDepartment = iFactory.createDepartment();
 		

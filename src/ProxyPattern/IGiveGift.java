@@ -9,5 +9,6 @@ public interface IGiveGift {
 	void giveFlowers();
 	void giveChocolate();
 	void giveDolls();
+
 	
 }
